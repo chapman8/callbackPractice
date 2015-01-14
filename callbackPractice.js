@@ -136,9 +136,9 @@ uniq(names, function(uniqArr){
 
 var each = function (arr, cb) {
   for (var i = 0; i < arr.length; i++) {
-    var index1 = arr[i];
-    var item = "arr[" + i + "]";
-    cb(index1, item);
+    var item = arr[i];
+    var index1 = "arr[" + i + "]";
+    cb(item, index1);
   }
   // var index1 = arr[2];
   // var item =  "arr[2]";
