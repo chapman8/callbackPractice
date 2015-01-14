@@ -111,14 +111,26 @@ contains(names, 'Colt', function(result){
 
 var uniq = function (arr, cb) {
     var newArray = [];
-    for (var i = 0; i < arr.length; i++) {
-      if (newArray.indexOf(arr[i]) === -1) {
-        newArray.push(arr[i]);
+    for (var i = 0; i < arr.length; i++) { //loop through arr 
+      if (newArray.indexOf(arr[i]) === -1) { // loop through newArr and check index of each name of arr. If name is not included it will return -1
+        newArray.push(arr[i]); // If it is equal to 
       }
     }
    cb(newArray);
 };
 
+/*OR:
+var uniq = function (arr, cb) {
+    var newArray = [];
+    for (var i = 0; i < arr.length; i++) { 
+      if (i !== arr.indexOf(arr[i])) {
+        arr.splice(i,1);
+        i--;
+      }
+    }
+    cb(arr);
+  }
+*/
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
